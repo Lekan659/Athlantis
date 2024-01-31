@@ -54,31 +54,7 @@ def print_top_50_classical_players() -> None:
             break
 
 
-
-
-def generate_rating_csv_for_top_50_classical_players(username) -> None:
-    from datetime import datetime, timedelta
-    today_date = datetime.now().date()
-    end_date = today_date - timedelta(days=29)
-
-    cheaders = [username]
-
-    # Reverse count down from 2024-01-30 to 2024-01-01 and print the dates
-    for day in range((today_date - end_date).days + 1):
-        print(day)
-        current_date = end_date + timedelta(days=day)
-        formatted_date = current_date.strftime("%Y-%m-%d")
-        cheaders.append(formatted_date)
-    
-    print(cheaders)
-    # pass
-
-
-
-
-generate_rating_csv_for_top_50_classical_players('strategyforchess')
-
-# print_top_50_classical_players()
+print_top_50_classical_players()
 
 
 # print_last_30_day_rating_for_top_player('strategyforchess')
